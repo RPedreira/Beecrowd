@@ -25,10 +25,10 @@ int main() {
 
     for (int i = 1; i <= r; i++) {
       for (int j = 1; j <= k; j++) {
-        if (regions[i - 1] > j)
+        if (regions[i] > j)
           dp[i][j] = dp[i - 1][j];
         else
-          dp[i][j] = dp[i - 1][j] || dp[i - 1][j - regions[i - 1]];
+          dp[i][j] = dp[i - 1][j] || dp[i - 1][j - regions[i]];
       }
     }
 
